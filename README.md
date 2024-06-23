@@ -1,7 +1,5 @@
 # Customer Churn Prediction
 
-![Churn Prediction](churn_prediction.png)
-
 ## Overview
 This project aims to predict customer churn for a fictional telecommunications company using machine learning techniques. Predicting customer churn can help businesses take proactive measures to retain customers and improve customer satisfaction.
 
@@ -33,7 +31,7 @@ This project aims to predict customer churn for a fictional telecommunications c
 ## Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/your_username/customer-churn-prediction.git
+   git clone https://github.com/SakshiFadnavis2003/customer-churn-prediction.git
    cd customer-churn-prediction
    ```
 
