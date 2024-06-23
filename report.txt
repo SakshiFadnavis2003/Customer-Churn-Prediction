@@ -1,0 +1,96 @@
+ Customer Churn Prediction for Telecom Company
+
+ 1. Introduction
+
+Objective:
+The primary goal of this project is to predict customer churn in a telecom company using machine learning techniques. Customer churn refers to the loss of customers over a specified period. By predicting churn, the company can take proactive measures to retain customers and improve business performance.
+
+Dataset:
+The dataset contains customer demographics, account information, and service usage details. The data was sourced from a telecom company and includes features such as tenure, contract type, payment method, monthly charges, and total charges.
+
+ 2. Data Cleaning and Preprocessing
+
+Handling Missing Values:
+- Rows with missing values were dropped.
+- Empty strings in numerical columns were replaced with NaN and imputed with median values.
+
+Encoding Categorical Variables:
+Categorical features were encoded using OneHotEncoder, which converts categorical values into binary columns.
+
+Normalization:
+Numerical features were standardized using StandardScaler to ensure they have a mean of 0 and a standard deviation of 1.
+
+Feature Creation:
+- Tenure Group: Tenure was categorized into groups such as 0-12 months, 13-24 months, etc.
+- Average Monthly Charges: Calculated as total charges divided by tenure.
+
+Dimensionality Reduction:
+Principal Component Analysis (PCA) was applied to reduce the dimensionality of numerical features, retaining the components that explain the most variance.
+
+ 3. Exploratory Data Analysis (EDA)
+
+Numerical Features:
+Histograms and box plots were used to visualize the distribution and detect outliers in features like tenure, monthly charges, and total charges.
+
+Categorical Features:
+Bar charts were used to show the distribution of categorical variables such as gender, contract type, and payment method.
+
+Correlation Analysis:
+A heatmap was used to visualize the correlation between numerical features and churn.
+
+ 4. Model Selection and Evaluation
+
+Models Evaluated:
+- Logistic Regression
+- Random Forest Classifier
+- Gradient Boosting Classifier
+- Support Vector Machine (SVM)
+- Neural Network (MLPClassifier)
+
+Evaluation Metrics:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+
+Methodology:
+5-fold cross-validation was used to evaluate the models. This method ensures that each model is trained and validated on different subsets of the data to provide an unbiased evaluation of model performance.
+
+Results:
+- Logistic Regression performed the best across most metrics, providing a good balance between accuracy, precision, recall, and ROC-AUC.
+- Random Forest and Gradient Boosting also showed competitive results.
+
+ 5. Hyperparameter Tuning
+
+Method:
+GridSearchCV was used for hyperparameter tuning of the Logistic Regression model. This involves searching through a specified parameter grid to find the best combination of hyperparameters.
+
+Results:
+- Best Parameters: 
+  - Solver: 'liblinear'
+  - Penalty: 'l2'
+  - C: 0.1
+  - Max_iter: 200
+- Test Set Performance: 
+  - High accuracy and ROC-AUC score, indicating a well-performing model.
+
+ 6. Results
+
+Model Performance:
+- Logistic Regression: Best balance of metrics.
+- Random Forest: Strong performance with good accuracy and precision.
+- Gradient Boosting: Competitive results, particularly in precision and recall.
+
+Feature Importance:
+Important features identified included contract type, tenure, monthly charges, and total charges.
+
+ 7. Conclusion and Next Steps
+
+Conclusion:
+The project successfully predicted customer churn using machine learning models. Logistic Regression emerged as the top-performing model, providing a reliable balance of accuracy and other key metrics.
+
+Next Steps:
+- Further feature engineering to improve model performance.
+- Optimization and exploration of additional models, such as XGBoost and ensemble methods.
+- Implementation of the model in a production environment for real-time churn prediction.
